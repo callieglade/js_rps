@@ -37,22 +37,20 @@ function game() {
     let computerScore = 0;
     let round = '';
     console.log('Welcome to Rock, Paper, Scissors!');
-    do {
-        let playerPick = prompt('Select Rock, Paper, or Scissors');
-        let computerPick = computerPlay();
-        round = playRound(playerPick, computerPick);
-        console.log(round);
-        if(round.includes('win')) {
-            playerScore++;
-        } else if(round.includes('lose')) {
-            computerScore++;
-        } else {
-            playerScore;
-            computerScore;
-        }
-        console.log('Player Score: ' + playerScore);
-        console.log('Computer Score: ' + computerScore);
-    } while (playerScore < 3 && computerScore < 3);
+    let playerPick = prompt('Select Rock, Paper, or Scissors');
+    let computerPick = computerPlay();
+    round = playRound(playerPick, computerPick);
+    console.log(round);
+    if(round.includes('win')) {
+        playerScore++;
+    } else if(round.includes('lose')) {
+        computerScore++;
+    } else {
+        playerScore;
+        computerScore;
+    }
+    console.log('Player Score: ' + playerScore);
+    console.log('Computer Score: ' + computerScore);
     if(playerScore === 3) {
         console.log('You win the game! Congratulations!');
         console.log('FINAL SCORE');
