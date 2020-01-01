@@ -66,11 +66,11 @@ function game() {
         keepScore(outcome, playerScore, computerScore);
     })
     paperBtn.addEventListener('click', () => {
-        round = playRound('paper', computerPlay());
+        let outcome = playRound('paper', computerPlay());
         keepScore(outcome, playerScore, computerScore);
     })
     scissorsBtn.addEventListener('click', () => {
-        round = playRound('scissors', computerPlay());
+        let outcome = playRound('scissors', computerPlay());
         keepScore(outcome, playerScore, computerScore);
     })
 
