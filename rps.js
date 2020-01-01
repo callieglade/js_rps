@@ -54,8 +54,13 @@ function game() {
 
     let playerScore = 0;
     let computerScore = 0;
-    let round = '';
-    console.log('Welcome to Rock, Paper, Scissors!');
+    
+    let pScore = document.createElement("h2");
+    let cScore = document.createElement("h2");
+    pScore.textContent = "Player:    " + playerScore;
+    cScore.textContent = "Computer:  " + computerScore;
+    results.appendChild(pScore);
+    results.appendChild(cScore);
     
     let rockBtn = document.querySelector("button.rock");
     let paperBtn = document.querySelector("button.paper");
