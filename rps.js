@@ -89,7 +89,7 @@ function game() {
         cScore.textContent = "Computer:  " + score[1];
         playerScore = score[0];
         computerScore = score[1];
-        finalScore(winner, score[0], score[1]);
+        if (playerScore < 3 || computerScore < 3) finalScore(winner, score[0], score[1]);
     })
     paperBtn.addEventListener('click', () => {
         let outcome = playRound('paper', computerPlay());
@@ -99,7 +99,7 @@ function game() {
         cScore.textContent = "Computer:  " + score[1];
         playerScore = score[0];
         computerScore = score[1];
-        finalScore(winner, score[0], score[1]);
+        if (playerScore < 3 || computerScore < 3) finalScore(winner, score[0], score[1]);
     })
     scissorsBtn.addEventListener('click', () => {
         let outcome = playRound('scissors', computerPlay());
@@ -109,7 +109,7 @@ function game() {
         cScore.textContent = "Computer:  " + score[1];
         playerScore = score[0];
         computerScore = score[1];
-        finalScore(winner, score[0], score[1]);
+        if (playerScore < 3 || computerScore < 3) finalScore(winner, score[0], score[1]);
     })
 }
 game();
