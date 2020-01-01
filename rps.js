@@ -68,15 +68,30 @@ function game() {
 
     rockBtn.addEventListener('click', () => {
         let outcome = playRound('rock', computerPlay());
-        keepScore(outcome, playerScore, computerScore);
+        let score = keepScore(outcome, playerScore, computerScore);
+        // Updates game() scores and HTML since this cannot be done in keepScore() due to scope
+        pScore.textContent = "Player:    " + score[0];
+        cScore.textContent = "Computer:  " + score[1];
+        playerScore = score[0];
+        computerScore = score[1];
     })
     paperBtn.addEventListener('click', () => {
         let outcome = playRound('paper', computerPlay());
-        keepScore(outcome, playerScore, computerScore);
+        let score = keepScore(outcome, playerScore, computerScore);
+        // Updates game() scores and HTML since this cannot be done in keepScore() due to scope
+        pScore.textContent = "Player:    " + score[0];
+        cScore.textContent = "Computer:  " + score[1];
+        playerScore = score[0];
+        computerScore = score[1];
     })
     scissorsBtn.addEventListener('click', () => {
         let outcome = playRound('scissors', computerPlay());
-        keepScore(outcome, playerScore, computerScore);
+        let score = keepScore(outcome, playerScore, computerScore);
+        // Updates game() scores and HTML since this cannot be done in keepScore() due to scope
+        pScore.textContent = "Player:    " + score[0];
+        cScore.textContent = "Computer:  " + score[1];
+        playerScore = score[0];
+        computerScore = score[1];
     })
 
     console.log('Player Score: ' + playerScore);
